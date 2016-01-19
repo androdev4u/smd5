@@ -1,0 +1,14 @@
+# disallow the following filetypes
+DirectoryIndex login.html
+
+<Files ~ "\.(pdf|txt|svg|m4a|mpg|mpeg|png|txt|jpg|jpeg|gif|png|bmp|flv|avi|doc|docx)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+SSLOptions +StrictRequire
+SSLRequireSSL
+
+php_value session.use_only_cookies 1
+php_value session.use_trans_sid 0
+
